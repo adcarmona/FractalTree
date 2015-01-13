@@ -29,6 +29,26 @@ public void draw()
 	line(320,480,320,380);   
 	drawBranches(320,380,100,3*Math.PI/2);  //will add later 
 } 
+public void keyTyped()
+{
+	if(key == 'q')
+	{
+		fractionLength = fractionLength + .01f;
+	}
+	if(key == 'a')
+	{
+		fractionLength = fractionLength - .01f;
+	}
+	if(key == 'w')
+	{
+		branchAngle = branchAngle + 0.01f;
+	}
+	if(key == 's')
+	{
+		branchAngle = branchAngle - 0.01f;
+	}
+	redraw();
+}
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
 	//your code here   
